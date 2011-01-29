@@ -1,9 +1,9 @@
 [user]
-	name = rabidpraxis
-	email = webster.kevin@gmail.com
+  name = Kevin Webster
+  email = webster.kevin@gmail.com
 
 [core]
-		editor = vim
+  editor = vim
 
 [color]
   branch = auto
