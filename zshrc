@@ -16,6 +16,6 @@ export ZSH_THEME="rabidpraxis"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(vi-mode git osx textmate github brew gem rails3 rpNotes rpProjects)
+plugins=(vi-mode git osx textmate github brew gem rails3 rp_notes rp_project)
 
 source $ZSH/oh-my-zsh.sh

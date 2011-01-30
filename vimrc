@@ -5,7 +5,7 @@ endif
 
 " Source graphical vim settings
 if has("gui_running") && filereadable(expand("~/.vim/gvimrc"))
-    source ~/.vim/gvimrc
+  source ~/.vim/gvimrc
 endif
 
 " Source local vim settings
