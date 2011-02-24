@@ -16,6 +16,6 @@ export ZSH_THEME="rpserver"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rvm vi-mode git osx textmate github brew gem rails3 rp_notes rp_project)
+plugins=(rvm vi-mode git osx textmate github brew gem rails3)
 
 source $ZSH/oh-my-zsh.sh
