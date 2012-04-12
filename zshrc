@@ -19,3 +19,5 @@ export ZSH_THEME="rabidpraxis"
 plugins=(rvm vi-mode git osx textmate github brew gem rails3 rp_notes rp_project)
 
 source $ZSH/oh-my-zsh.sh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
