@@ -1,0 +1,15 @@
+set complete=sbS
+
+map ,gr :tabopen reader.google.com<CR>
+map ,gm :tabopen maps.google.com<CR>
+
+"Allow for google reader to use keys
+set passkeys+='www\.google\.com/reader':c/jkhnpuelxsvfra#`[]z?\*nrgiIU+-=<Tab><Space><CR>
+
+set editor=mvim
+
+" GUI Options
+" set showtabline=never
+set guioptions-=b,r
+
+noremap ; :
