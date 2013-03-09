@@ -16,9 +16,11 @@ export ZSH_THEME="rabidpraxis"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rvm bundler vi-mode git osx github brew gem rails3 rp_notes rp_project)
+plugins=(bundler vi-mode git osx github brew gem rails3 rp_notes rp_project)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# Rbenv settings
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
