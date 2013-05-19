@@ -3,9 +3,9 @@
 # =================================================================================
 #
 #  $HOME/.bashrc settings for OS X
-# 
+#
 #  Last modified Friday, January 1st, 2010
-# 
+#
 # =================================================================================
 
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/mysql/bin:$PATH
