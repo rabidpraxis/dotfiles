@@ -55,5 +55,3 @@ web=/opt/local/apache2/htdocs/
 httpdconf=/opt/local/apache2/conf/httpd.conf
 httpdvhost=/opt/local/apache2/conf/extra/httpd-vhosts.conf
 hosts=/etc/hosts
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
