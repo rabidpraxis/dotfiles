@@ -1,26 +1,23 @@
-# Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
 
-# Set to the name theme to load.
-# Look in ~/.oh-my-zsh/themes/
-export ZSH_THEME="rabidpraxis"
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
-# Set to this to use case-sensitive completion
-# export CASE_SENSITIVE="true"
+# Customize to your needs...
+alias v='vim'
+alias r='rails'
+alias be='bundle exec'
+alias z='j'
 
-# Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
+# Remap directory listing
+alias ll='ls -lah'
 
-# Uncomment following line if you want to disable colors in ls
-# export DISABLE_LS_COLORS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(vi-mode git osx github brew gem rails3 rp_notes rp_project)
-
-source $ZSH/oh-my-zsh.sh
-unsetopt correct_all
-
-# Rbenv settings
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# Load FASD
+eval "$(fasd --init auto)"

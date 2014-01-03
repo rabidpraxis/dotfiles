@@ -1,12 +1,14 @@
 require 'rake'
 require 'erb'
 
+IGNORED_FILES = %w[Rakefile README.mdown LICENSE osx]
+
 desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
   Dir['*'].each do |file|
-    next if %w[Rakefile README.mdown LICENSE].include? file
-    
+    next if IGNORED_FILES.include? file
+
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
       if File.identical? file, File.join(ENV['HOME'], ".#{file.sub('.erb', '')}")
         puts "identical ~/.#{file.sub('.erb', '')}"
