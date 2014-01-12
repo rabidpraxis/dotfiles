@@ -16,6 +16,8 @@ alias r='rails'
 alias be='bundle exec'
 alias z='j'
 
+alias gpg='gpg2'
+
 # Remap directory listing
 alias ll='ls -lah'
 
