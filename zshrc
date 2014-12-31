@@ -23,3 +23,5 @@ alias ll='ls -lah'
 
 # Load FASD
 eval "$(fasd --init auto)"
+
+export TERM=xterm-256color

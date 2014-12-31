@@ -1,6 +1,6 @@
 [submodule "vim"]
 	path = vim
-	url = http://github.com/rabidpraxis/vim-settings.git
+	url = git@github.com:rabidpraxis/vim-settings.git
 [submodule "zprezto"]
 	path = zprezto
 	url = git@github.com:rabidpraxis/prezto.git
