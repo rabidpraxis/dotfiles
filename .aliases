@@ -2,10 +2,9 @@
 #
 alias g='git'
 alias gst='git status --short'
-alias gl='git pull'
 alias gup='git fetch && git rebase'
 alias gp='git push'
-gdv() { git-diff -w "$@" | view - }
+alias gpl='git pull'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gco='git checkout'
@@ -13,14 +12,16 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
+alias gl='git log --graph --abbrev-commit --date=relative'
 alias glg='git log --stat --max-count=5'
-alias gra='g ra'
-alias gd='g diff'
+alias gra='git --no-pager log --graph --abbrev-commit --date=relative -20'
+alias gd='git diff'
 alias gprev='content'
 alias gco-first='git checkout `git rev-list master | tail -1`'
 alias gco-prev='git checkout `git rev-list --topo-order HEAD..master | tail -1`'
 alias gco-back='git checkout HEAD~'
 
+gdv() { git-diff -w "$@" | view - }
 #
 # Easy commit messages
 # ex: gg the commit message is this

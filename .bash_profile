@@ -4,5 +4,5 @@ files=(
 )
 
 for file in $files; do
-  [ -r "$file" ] && source "$file"
+  [ -r .${file} ] && source .${file}
 done
