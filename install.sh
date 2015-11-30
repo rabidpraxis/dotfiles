@@ -16,3 +16,4 @@ VIMPATH=vim vim -u vim/vimrc +PluginInstall +qall
 echo "* Ready to rawk"
 EOF
 
+ZDOTDIR=`pwd` zsh
