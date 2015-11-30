@@ -17,7 +17,7 @@ mafredri/zsh-async
 sindresorhus/pure
 tarruda/zsh-autosuggestions
 trapd00r/zsh-syntax-highlighting-filetypes
-fasd
+clvv/fasd
 EOBUNDLES
 
 antigen apply
