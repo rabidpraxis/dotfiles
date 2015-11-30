@@ -8,4 +8,11 @@ git checkout --quiet v2
 echo "* Loading submodule dependencies"
 git submodule update --quiet --init --recursive
 echo "* Installing ZSH deps"
-ZDOTDIR=`pwd` zsh
+# Note: I have to inject this into the new zsh to keep this init script running
+ZDOTDIR=`pwd` zsh <<'EOF'
+echo "* Install VIM deps"
+VIMPATH=vim vim -u vim/vimrc +PluginInstall +qall
+
+echo "* Ready to rawk"
+EOF
+
