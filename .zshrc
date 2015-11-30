@@ -48,3 +48,11 @@ zle-line-init() {
 }
 
 zle -N zle-line-init
+
+# Enable tab completion for `g` by marking it as an alias for `git`
+if type __git_complete &> /dev/null; then
+  __git_complete g __git_main
+fi;
+
+# Defer to bash_profile for the rest of initialization
+source .bash_profile
