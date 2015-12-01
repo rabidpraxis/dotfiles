@@ -1,3 +1,14 @@
+# ===  General  ================================================================
+alias ll='ls -lah'
+alias gpg='gpg2'
+alias top='htop'
+
+alias tmuxa='tmuxa attach'
+
+# ===  Ruby  ===================================================================
+alias be='bundle exec'
+alias r='rails'
+
 # ===  Vim  ====================================================================
 alias vim="VIMPATH=`pwd`/vim vim -u `pwd`/vim/vimrc"
 alias v="vim"
@@ -26,8 +37,4 @@ alias gco-prev='g checkout `g rev-list --topo-order HEAD..master | tail -1`'
 alias gco-back='g checkout HEAD~'
 
 gdv() { gd -w "$@" | view - }
-#
-# Easy commit messages
-# ex: gg the commit message is this
-#
 gg () { gc -a -m "$*" }
