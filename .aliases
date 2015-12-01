@@ -48,7 +48,8 @@ alias v="vim"
 
 # ===  Git  ====================================================================
 #
-alias g='HOME=$ZDOTDIR git'
+alias git='HOME=$ZDOTDIR /usr/bin/env git'
+alias g='git'
 alias gst='g status --short'
 alias gup='g fetch && g rebase'
 alias gp='g push'
