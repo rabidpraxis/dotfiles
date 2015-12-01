@@ -34,6 +34,7 @@
   st = status
   ci = commit
   co = checkout
+  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
   di = diff
   dc = diff --cached
   amend = commit --amend

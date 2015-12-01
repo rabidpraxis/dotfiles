@@ -1,0 +1,40 @@
+# ===  General  ================================================================
+alias ll='ls -lah'
+alias gpg='gpg2'
+alias top='htop'
+
+alias tmuxa='tmuxa attach'
+
+# ===  Ruby  ===================================================================
+alias be='bundle exec'
+alias r='rails'
+
+# ===  Vim  ====================================================================
+alias vim="VIMPATH=`pwd`/vim vim -u `pwd`/vim/vimrc"
+alias v="vim"
+
+# ===  Git  ====================================================================
+#
+alias g='HOME=`pwd` git'
+alias gst='g status --short'
+alias gup='g fetch && g rebase'
+alias gp='g push'
+alias gpl='g pull'
+alias gc='g commit -v'
+alias gca='g commit -v -a'
+alias gco='g checkout'
+alias gb='g branch'
+alias gba='g branch -a'
+alias gcount='g shortlog -sn'
+alias gcp='g cherry-pick'
+alias gl='g log --graph --abbrev-commit --date=relative'
+alias glg='g log --stat --max-count=5'
+alias gra='g --no-pager log --graph --abbrev-commit --date=relative -20'
+alias gd='g diff'
+alias gprev='content'
+alias gco-first='g checkout `g rev-list master | tail -1`'
+alias gco-prev='g checkout `g rev-list --topo-order HEAD..master | tail -1`'
+alias gco-back='g checkout HEAD~'
+
+gdv() { gd -w "$@" | view - }
+gg () { gc -a -m "$*" }

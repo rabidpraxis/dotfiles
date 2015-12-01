@@ -1,15 +1,3 @@
 # Install
 
-There is heavy use of submodules so I would recommend that you grab this with:
-
-    git clone --recursive git://github.com/rabidpraxis/dotfiles.git ~/.dotfiles
-    cd ~/.dotfiles
-    rake install
-
-## ZSH setting
-
-I would recommend using ZSH. It has many great features that I will not go into right here. If you want to change your shell default then you can use this command:
-
-    chsh -s /bin/zsh
-  
-
+  bash -c "$(wget -q -O - https://raw.githubusercontent.com/rabidpraxis/dotfiles/v2/install.sh)"
