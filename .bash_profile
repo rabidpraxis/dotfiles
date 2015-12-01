@@ -1,6 +1,7 @@
 files=(
   $ZDOTDIR/.exports
   $ZDOTDIR/.aliases
+  $ZDOTDIR/.functions
   $ZDOTDIR/.initrc
   $HOME/.exports.local
   $HOME/.aliases.local
