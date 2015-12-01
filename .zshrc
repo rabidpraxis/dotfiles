@@ -16,7 +16,6 @@ zsh-users/zsh-history-substring-search
 mafredri/zsh-async
 sindresorhus/pure
 trapd00r/zsh-syntax-highlighting-filetypes
-clvv/fasd
 EOBUNDLES
 
 antigen apply
