@@ -10,4 +10,5 @@ for file in $files; do
 done
 
 # Load fasd
-eval "$($ZDOTDIR/utils/fasd/fasd --init auto)"
+export PATH=$PATH:$ZDOTDIR/utils/fasd
+eval "$(fasd --init auto)"
