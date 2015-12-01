@@ -1,0 +1,9 @@
+# vim: noai:ft=sh
+
+# Load fasd
+export PATH=$PATH:$ZDOTDIR/utils/fasd
+eval "$(fasd --init auto)"
+
+# Load NVM
+export NVM_DIR="$ZDOTDIR/utils/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
