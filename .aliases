@@ -3,14 +3,15 @@ alias ll='ls -lah'
 alias gpg='gpg2'
 alias top='htop'
 
-alias tmuxa='tmuxa attach'
+alias tmux='tmux -f $ZDOTDIR/tmux.conf'
+alias tmuxa='tmux attach'
 
 # ===  Ruby  ===================================================================
 alias be='bundle exec'
 alias r='rails'
 
 # ===  Vim  ====================================================================
-alias vim="VIMPATH=`pwd`/vim vim -u `pwd`/vim/vimrc"
+alias vim="VIMPATH=$ZDOTDIR/vim vim -u $ZDOTDIR/vim/vimrc"
 alias v="vim"
 
 # ===  Git  ====================================================================

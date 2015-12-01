@@ -2,9 +2,6 @@
   name = rabidpraxis
   email = kevin@kevinwebster.me
 
-[core]
-  editor = vim
-
 [color]
   branch = auto
   diff = auto

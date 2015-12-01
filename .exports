@@ -1,9 +1,13 @@
-#===  Node  ===================================================================
+# ===  Basic  ==================================================================
+export VISUAL="VIMPATH=$ZDOTDIR/vim vim -u $ZDOTDIR/vim/vimrc"
+export EDITOR="$VISUAL"
+
+# ===  Node  ===================================================================
 export NPM_PACKAGES="${HOME}/npm-global"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
 export PATH="$NPM_PACKAGES/bin:$PATH"
 export TERM=xterm-256color
 
-export VIMPATH=`pwd`/vim
-export VIMINIT=`pwd`/vim/.vimrc
+export VIMPATH=$ZDOTDIR/vim
+export VIMINIT=$ZDOTDIR/vim/.vimrc

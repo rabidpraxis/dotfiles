@@ -3,9 +3,9 @@ bindkey -v
 
 # ===  Load Antigen  ===========================================================
 #
-source antigen/antigen.zsh
-mkdir -p .antigen-bundles
-export ADOTDIR=$(dirname $0)/.antigen-bundles
+source $ZDOTDIR/antigen/antigen.zsh
+mkdir -p $ZDOTDIR/.antigen-bundles
+export ADOTDIR=$ZDOTDIR/.antigen-bundles
 
 antigen use oh-my-zsh
 
@@ -34,4 +34,4 @@ if type __git_complete &> /dev/null; then
 fi;
 
 # Defer to bash_profile for the rest of initialization
-source .bash_profile
+source $ZDOTDIR/.bash_profile

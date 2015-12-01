@@ -1,6 +1,6 @@
 files=(
-  .exports
-  .aliases
+  $ZDOTDIR/.exports
+  $ZDOTDIR/.aliases
   $HOME/.exports.local
   $HOME/.aliases.local
 )
