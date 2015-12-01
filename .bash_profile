@@ -8,3 +8,6 @@ files=(
 for file in $files; do
   [ -r ${file} ] && source ${file}
 done
+
+# Load fasd
+eval "$($ZDOTDIR/utils/fasd/fasd --init auto)"

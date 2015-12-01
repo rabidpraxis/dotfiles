@@ -2,6 +2,7 @@
 alias ll='ls -lah'
 alias gpg='gpg2'
 alias top='htop'
+alias z='j' # fasd jump
 
 alias tmux='tmux -f $ZDOTDIR/tmux.conf'
 alias tmuxa='tmux attach'

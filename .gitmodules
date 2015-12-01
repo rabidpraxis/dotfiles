@@ -4,3 +4,6 @@
 [submodule "antigen"]
 	path = antigen
 	url = https://github.com/zsh-users/antigen.git
+[submodule "utils/fasd"]
+	path = utils/fasd
+	url = https://github.com/clvv/fasd.git
