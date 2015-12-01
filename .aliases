@@ -24,7 +24,8 @@ alias l='ls -lah'
 alias ls='CLICOLOR_FORCE=1 gls -aFh ${colorflag} --group-directories-first'
 
 # List ALL files (colorized() in long format, show permissions in octal
-alias ll="ls -l | awk '
+lsl() {
+  ls -l $1 | awk "
 {
   k=0;
   for (i=0;i<=8;i++)
@@ -32,7 +33,11 @@ alias ll="ls -l | awk '
     if (k)
       printf(\"%0o \",k);
     printf(\" %9s  %3s %2s %5s  %6s  %s %s %s\n\", \$3, \$6, \$7, \$8, \$5, \$9,\$10, \$11);
-}'"
+}"
+}
+
+# Need to alias this, ll as a function was erroring
+alias ll='lsl'
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
