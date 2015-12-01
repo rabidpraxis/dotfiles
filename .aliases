@@ -1,3 +1,5 @@
+# vim: noai:ft=sh
+
 # ===  General  ================================================================
 alias ll='ls -lah'
 alias gpg='gpg2'

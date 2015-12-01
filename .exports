@@ -1,3 +1,5 @@
+# vim: noai:ft=sh
+
 # ===  Basic  ==================================================================
 export VISUAL="VIMPATH=$ZDOTDIR/vim vim -u $ZDOTDIR/vim/vimrc"
 export EDITOR="$VISUAL"

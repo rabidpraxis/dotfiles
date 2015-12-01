@@ -7,3 +7,6 @@
 [submodule "utils/fasd"]
 	path = utils/fasd
 	url = https://github.com/clvv/fasd.git
+[submodule "utils/nvm"]
+	path = utils/nvm
+	url = https://github.com/creationix/nvm.git
