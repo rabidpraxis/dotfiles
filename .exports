@@ -1,1 +1,9 @@
-export GIT_CONFIG=`pwd`/gitconfig
+#===  Node  ===================================================================
+export NPM_PACKAGES="${HOME}/npm-global"
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+
+export PATH="$NPM_PACKAGES/bin:$PATH"
+export TERM=xterm-256color
+
+export VIMPATH=`pwd`/vim
+export VIMINIT=`pwd`/vim/.vimrc
