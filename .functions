@@ -1,10 +1,5 @@
 # vim: noai:ft=sh
 
-# Create a new directory and enter it
-md() {
-  mkdir -p "$@" && cd "$@"
-}
-
 # Copy w/ progress
 cp_p () {
   rsync -WavP --human-readable --progress $1 $2
