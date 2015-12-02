@@ -9,4 +9,4 @@ export NVM_DIR="$ZDOTDIR/utils/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Load directory colors
-eval "$(dircolors $ZDOTDIR/.dircolors)"
+command -v dircolors >/dev/null 2>&1 && eval "$(dircolors $ZDOTDIR/.dircolors)"
