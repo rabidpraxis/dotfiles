@@ -1,3 +1,6 @@
+# Ensure local path is avaliable to all scripts
+export PATH="/usr/local/bin:$PATH"
+
 files=(
   $ZDOTDIR/.exports
   $ZDOTDIR/.aliases
