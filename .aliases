@@ -51,6 +51,9 @@ alias r='rails'
 alias vim="VIMPATH=$ZDOTDIR/vim vim -u $ZDOTDIR/vim/vimrc"
 alias v="vim"
 
+# ===  CTags  ==================================================================
+alias ctags="HOME=$ZDOTDIR ctags"
+
 # ===  Git  ====================================================================
 #
 alias git='HOME=$ZDOTDIR /usr/bin/env git'
