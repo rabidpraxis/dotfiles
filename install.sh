@@ -10,6 +10,7 @@ cd dotfiles
 echo "* Installing ruby-build"
 mkdir -p utils/rbenv/plugins
 ln -s ../../ruby-build/ utils/rbenv/plugins/
+ln -s ../../rbenv-ctags/ utils/rbenv/plugins/
 
 echo "* Installing ZSH deps"
 # Note: I have to inject this into the new zsh to keep this init script running

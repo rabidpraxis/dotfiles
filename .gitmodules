@@ -16,3 +16,6 @@
 [submodule "utils/ruby-build"]
 	path = utils/ruby-build
 	url = https://github.com/rbenv/ruby-build.git
+[submodule "utils/rbenv-ctags"]
+	path = utils/rbenv-ctags
+	url = https://github.com/tpope/rbenv-ctags.git
