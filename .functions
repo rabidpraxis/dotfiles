@@ -13,3 +13,11 @@ ff() {
 ffd() {
   find . -name "$1" -type d 2>&1 | grep -v 'Permission denied'
 }
+
+build_ruby_tags() {
+  echo "building gem tags"
+  ctags -R -f external.tags $(bundle list --paths) &
+  echo "building project tags"
+  ctags -R .
+  wait
+}
