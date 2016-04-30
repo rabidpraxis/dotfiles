@@ -48,7 +48,7 @@ alias be='bundle exec'
 alias r='rails'
 
 # ===  Vim  ====================================================================
-alias vim="VIMPATH=$ZDOTDIR/vim vim -u $ZDOTDIR/vim/vimrc"
+alias vim="VIMPATH=$ZDOTDIR/vim mvim -v -u $ZDOTDIR/vim/vimrc"
 alias v="vim"
 
 # ===  CTags  ==================================================================
