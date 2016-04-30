@@ -10,8 +10,3 @@ export NVM_DIR="$ZDOTDIR/utils/nvm"
 
 # Load directory colors
 command -v dircolors >/dev/null 2>&1 && eval "$(dircolors $ZDOTDIR/.dircolors)"
-
-# Load rbenv
-export PATH="$ZDOTDIR/utils/rbenv/bin:$PATH"
-export RBENV_ROOT="$ZDOTDIR/utils/rbenv"
-eval "$(rbenv init -)"
