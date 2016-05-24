@@ -66,6 +66,7 @@ alias gc='g commit -v'
 alias gca='g commit -v -a'
 alias gco='g checkout'
 alias gb='g branch'
+alias gbb="git for-each-ref --sort='-committerdate' refs/heads/ --format='%(HEAD) (%(color:green)%(committerdate:relative)%(color:reset)) | %(color:yellow)%(refname:short)%(color:reset) | %(color:red)%(objectname:short)%(color:reset) | %(contents:subject) | %(authorname)' | column -t -s '|'"
 alias gba='g branch -a'
 alias gcount='g shortlog -sn'
 alias gcp='g cherry-pick'
