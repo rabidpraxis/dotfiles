@@ -44,3 +44,7 @@ Thumbs.db
 
 tags
 external.tags
+
+# Nested Package includes #
+node_modules
+elm-stuff
