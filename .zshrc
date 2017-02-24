@@ -35,3 +35,7 @@ fi;
 
 # Defer to bash_profile for the rest of initialization
 source $ZDOTDIR/.bash_profile
+
+# Load NVM
+export NVM_DIR="$ZDOTDIR/utils/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
