@@ -1,7 +1,6 @@
 [user]
 	name = Kevin Webster
-	email = kwebster@renewfinancial.com
-
+	email = kevin@kevinwebster.me
 [color]
   branch = auto
   diff = auto
@@ -62,4 +61,7 @@
 [branch]
 	autosetuprebase = always
 [credential]
-	helper = osxkeychain
+	helper = "!aws codecommit credential-helper $@"
+	UseHttpPath = true
+[gpg]
+	program = /usr/local/bin/gpg

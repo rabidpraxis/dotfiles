@@ -21,3 +21,19 @@ build_ruby_tags() {
   ctags -R .
   wait
 }
+
+#===  Go  =====================================================================
+go_migrate() {
+  migrate \
+    -url ${GO_MIGRATE_DB:=postgres://postgres:@localhost:5557/grublab?sslmode=disable} \
+    -path ${GO_MIGRATE_PATH:=./migrations} \
+    "$@"
+}
+
+movie_to_kradstation() {
+  rsync -auv -e "ssh -p 222" $1 kevin@192.168.0.100:/media/extras/videos/movies-complete
+}
+
+tv_show_to_kradstation() {
+  rsync -auv -e "ssh -p 222" $1 kevin@192.168.0.100:/media/extras/videos/torrent-shows
+}

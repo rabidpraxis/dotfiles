@@ -1,7 +1,6 @@
 # vim: noai:ft=sh
 
 # ===  General  ================================================================
-alias gpg='gpg2'
 alias top='htop'
 alias refresh_zsh='source $ZDOTDIR/.zshrc'
 
@@ -48,7 +47,7 @@ alias be='bundle exec'
 alias r='rails'
 
 # ===  Vim  ====================================================================
-alias vim="VIMPATH=$ZDOTDIR/vim mvim -v -u $ZDOTDIR/vim/vimrc"
+alias vim="nvim -u $ZDOTDIR/vim/vimrc"
 alias v="vim"
 
 # ===  CTags  ==================================================================
