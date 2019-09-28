@@ -48,6 +48,9 @@
   gnc = goodness --cached
   fa = fetch --all
   pom = push origin master
+  files = !git diff --name-only $(git merge-base HEAD \"$REVIEW_BASE\")
+  stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")
+  rmbranch = "!f(){ git branch -d ${1} && git push origin --delete ${1}; };f"
 
 [format]
   pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
