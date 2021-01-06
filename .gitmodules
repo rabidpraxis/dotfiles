@@ -1,6 +1,3 @@
 [submodule "vim"]
 	path = vim
 	url = https://github.com/rabidpraxis/vim-settings.git
-[submodule "utils/fasd"]
-	path = utils/fasd
-	url = https://github.com/clvv/fasd.git

@@ -1,7 +1,6 @@
 # vim: noai:ft=sh
 
-# Load fasd
-export PATH="$PATH:$ZDOTDIR/utils/fasd"
+# Load fasd: `brew install fasd`
 eval "$(fasd --init auto)"
 
 # Load directory colors
