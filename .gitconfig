@@ -52,13 +52,23 @@
   stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")
   rmbranch = "!f(){ git branch -d ${1} && git push origin --delete ${1}; };f"
 
+  # Open all files changed since REVIEW_BASE in Vim tabs
+  # Then, run fugitive's :Gdiff in each tab, and finally
+  # tell vim-gitgutter to show +/- for changes since REVIEW_BASE
+  review = !nvim -u /Users/kevinwebster/.dotfiles/vim/vimrc -p $(git files) +\"tabdo Gdiff $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
+
+  # Same as the above, except specify names of files as arguments,
+  # instead of opening all files:
+  # git reviewone foo.js bar.js
+  reviewone = !nvim -u /Users/kevinwebster/.dotfiles/vim/vimrc -p +\"tabdo Gdiff $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
+
 [format]
   pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
 
 [merge]
   tool = vimdiff
 [push]
-	default = simple
+	default = current
 [core]
 	excludesfile = ~/.gitignore
 [branch]
@@ -68,3 +78,5 @@
 	UseHttpPath = true
 [gpg]
 	program = /usr/local/bin/gpg
+[pull]
+	ff = only

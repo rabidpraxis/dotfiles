@@ -52,3 +52,6 @@ ngrok.yml
 
 .local
 .gnupg
+.exrc
+scratch.rb
+.zsh_history

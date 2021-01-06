@@ -30,3 +30,5 @@ export GO_MIGRATE_DB=$POM_DB
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+export RUST_SRC_PATH="`rustc --print sysroot`/lib/rustlib/src/rust/src"

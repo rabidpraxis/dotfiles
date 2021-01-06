@@ -9,3 +9,5 @@ command -v dircolors >/dev/null 2>&1 && eval "$(dircolors $ZDOTDIR/.dircolors)"
 
 # Load direnv
 eval "$(direnv hook zsh)"
+
+. $(brew --prefix asdf)/asdf.sh

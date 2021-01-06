@@ -41,6 +41,8 @@ alias ll='lsl'
 # List only directories
 alias lsd='ls -l | grep "^d"'
 
+alias ..='cd ..'
+alias ...='cd .. && cd ..'
 
 # ===  Ruby  ===================================================================
 alias be='bundle exec'
