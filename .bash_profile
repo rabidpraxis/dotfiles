@@ -1,3 +1,5 @@
+# vim: noai:ft=sh
+echo "❯ .dotfiles/.bash_profile"
 files=(
   $ZDOTDIR/.exports
   $ZDOTDIR/.aliases

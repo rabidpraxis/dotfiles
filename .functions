@@ -14,11 +14,11 @@ ffd() {
   find . -name "$1" -type d 2>&1 | grep -v 'Permission denied'
 }
 
-build_ruby_tags() {
+ruby_tags() {
   echo "building gem tags"
-  ctags -R -f external.tags $(bundle list --paths) &
+  ripper-tags -R --extra=q -f external.tags --exclude=node_modules $(bundle list --paths) &
   echo "building project tags"
-  ctags -R .
+  ripper-tags -R --extra=q --exclude=node_modules .
   wait
 }
 
@@ -36,4 +36,10 @@ movie_to_kradstation() {
 
 tv_show_to_kradstation() {
   rsync -auv -e "ssh -p 222" $1 kevin@192.168.0.100:/media/extras/videos/torrent-shows
+}
+
+newvim() {
+  unset VIMPATH
+  unset VIMINIT
+  nvim
 }

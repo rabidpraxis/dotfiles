@@ -1,13 +1,22 @@
+# vim: noai:ft=sh
+echo "❯ .dotfiles/.zshrc"
+
 export PATH="/usr/local/bin:$PATH"
 
 SAVEHIST=100000
 bindkey -v
 
 export KEYTIMEOUT=20
-bindkey -M viins 'jj' vi-cmd-mode
+# bindkey -M viins 'jj' vi-cmd-mode
 
 source <(antibody init)
-antibody bundle < $ZDOTDIR/.zsh_plugins
+
+antibody bundle mafredri/zsh-async
+antibody bundle sindresorhus/pure
+
+antibody bundle zsh-users/zsh-syntax-highlighting
+antibody bundle zsh-users/zsh-history-substring-search
+antibody bundle zsh-users/zsh-completions
 
 # Ctrl-R history search
 bindkey '^R' history-incremental-search-backward

@@ -38,8 +38,10 @@ Thumbs.db
 .antigen-bundles
 .zcompdump*
 .cache
+.cpcache
 .viminfo
 .lesshst
+.vscode
 
 tags
 external.tags
@@ -48,10 +50,16 @@ external.tags
 node_modules
 elm-stuff
 
-ngrok.yml
-
 .local
 .gnupg
 .exrc
 scratch.rb
 .zsh_history
+
+Session.vim
+.nrepl-port
+.rebl
+
+# Specific to .dotfiles
+/nvim/plugin
+.zsh_sessions

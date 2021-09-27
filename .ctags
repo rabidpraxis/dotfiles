@@ -1,4 +1,4 @@
---exclude=.git
+kj--exclude=.git
 --exclude=log
 --exclude=tmp
 

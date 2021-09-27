@@ -1,4 +1,5 @@
 # vim: noai:ft=sh
+echo "❯ .dotfiles/.initrc"
 
 # Load fasd: `brew install fasd`
 eval "$(fasd --init auto)"
