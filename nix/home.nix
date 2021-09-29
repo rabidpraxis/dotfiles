@@ -15,9 +15,10 @@ in
   };
 
   programs.git.enable = true;
-  services.sxhkd.enable = true;
+  programs.tmux.enable = true;
 
   imports = [
+    ./home/desktop.nix
     ./home/zsh.nix
     ./home/console.nix
     ./home/nvim.nix
@@ -43,6 +44,7 @@ in
     "*.color14" = "#9AEDFE";
     "*.color7" = "#BFBFBF";
     "*.color15" = "#E6E6E6";
+    "Xcursor.size" = "32";
   };
 
   xdg.dataFile = {
@@ -54,6 +56,8 @@ in
 
   xdg.configFile = {
     "polybar/config".source = ./config/polybar/config;
+    "tmux/tmux.conf".source = ./config/tmux/tmux.conf;
+    "rofi/config.rasi".source = ./config/rofi/config.rasi;
     "sxhkd/sxhkdrc".source = ./config/sxhkd/sxhkdrc;
     "bspwm" = {
       source = ./config/bspwm;

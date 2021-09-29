@@ -46,6 +46,7 @@ opt.splitbelow = true         -- orizontal split to the bottom
 opt.ignorecase = true         -- ignore case letters when search
 opt.smartcase = true          -- ignore lowercase for the whole pattern
 opt.wrap = false              -- stop wrapping
+opt.termguicolors = true
 
 -- remove whitespace on save
 cmd[[au BufWritePre * :%s/\s\+$//e]]

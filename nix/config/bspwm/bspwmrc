@@ -34,5 +34,5 @@ sleep 1
 
 sxhkd &
 polybar main &
-
+alacritty &
 betterlockscreen -w &
