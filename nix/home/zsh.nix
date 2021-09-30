@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     zsh-powerlevel10k
-    coreutils
+    coreutils-full
   ];
 
   programs.zsh = {
@@ -10,8 +10,21 @@
     enableCompletion = true;
     enableAutosuggestions = true;
     initExtra = ''
-      eval `${pkgs.coreutils}/bin/dircolors "${../config/dircolors/solarized.256dark}"`
-      source ~/.aliases
+      eval `${pkgs.coreutils}/bin/dircolors "${../../config/dircolors/dark}"`
+
+      files=(
+        $HOME/.p10k.zsh
+        $HOME/.exports
+        $HOME/.aliases
+        $HOME/.initrc
+        $HOME/.exports.local
+        $HOME/.aliases.local
+        $HOME/.initrc.local
+      )
+
+      for file in $files; do
+        [ -r $file ] && source $file
+      done
     '';
 
     zplug = {
@@ -28,9 +41,9 @@
   };
 
   home.file = {
-    ".gitconfig".source = ../../.gitconfig;
-    ".aliases".source = ../config/zsh/.aliases;
-    ".dircolors".source = ../config/dircolors/solarized.256dark;
-    ".p10k.zsh".source = ../config/zsh/.p10k.zsh;
+    ".aliases".source = ../../config/zsh/.aliases;
+    ".functions".source = ../../config/zsh/.functions;
+    ".exports".source = ../../config/zsh/.exports;
+    ".p10k.zsh".source = ../../config/zsh/.p10k-lean.zsh;
   };
 }

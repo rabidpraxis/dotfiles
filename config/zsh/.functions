@@ -1,0 +1,31 @@
+# vim: noai:ft=sh
+
+# Copy w/ progress
+cp_p () {
+  rsync -WavP --human-readable --progress $1 $2
+}
+
+# find shorthand
+ff() {
+  find . -name "$1" 2>&1 | grep -v 'Permission denied'
+}
+
+ffd() {
+  find . -name "$1" -type d 2>&1 | grep -v 'Permission denied'
+}
+
+ruby_tags() {
+  echo "building gem tags"
+  ripper-tags -R --extra=q -f external.tags --exclude=node_modules $(bundle list --paths) &
+  echo "building project tags"
+  ripper-tags -R --extra=q --exclude=node_modules .
+  wait
+}
+
+#===  Go  =====================================================================
+go_migrate() {
+  migrate \
+    -url ${GO_MIGRATE_DB:=postgres://postgres:@localhost:5557/grublab?sslmode=disable} \
+    -path ${GO_MIGRATE_PATH:=./migrations} \
+    "$@"
+}

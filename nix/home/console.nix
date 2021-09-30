@@ -21,5 +21,5 @@
     };
   };
 
-  xdg.configFile."alacritty/alacritty.yml".source = ../config/alacritty/alacritty.yml;
+  xdg.configFile."alacritty/alacritty.yml".source = ../../config/alacritty/alacritty.yml;
 }

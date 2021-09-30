@@ -49,19 +49,18 @@ in
 
   xdg.dataFile = {
     "fonts" = {
-      source = ./config/fonts;
+      source = ../config/fonts;
       recursive = true;
     };
   };
 
   xdg.configFile = {
-    "polybar/config".source = ./config/polybar/config;
-    "tmux/tmux.conf".source = ./config/tmux/tmux.conf;
-    "rofi/config.rasi".source = ./config/rofi/config.rasi;
-    "sxhkd/sxhkdrc".source = ./config/sxhkd/sxhkdrc;
-    "bspwm" = {
-      source = ./config/bspwm;
-      recursive = true;
-    };
+    "git/config".source = ../config/git/config;
+    "git/ignore".source = ../config/git/ignore;
+    "polybar/config".source = ../config/polybar/config;
+    "tmux/tmux.conf".source = ../config/tmux/tmux.conf;
+    "rofi/config.rasi".source = ../config/rofi/config.rasi;
+    "sxhkd/sxhkdrc".source = ../config/sxhkd/sxhkdrc;
+    "bspwm/bspwmrc".source = ../config/bspwm/bspwmrc;
   };
 }
