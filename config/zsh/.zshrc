@@ -1,6 +1,4 @@
 # vim: noai:ft=sh
-echo "❯ .dotfiles/.zshrc"
-
 export PATH="/usr/local/bin:$PATH"
 export DOTFILES="$HOME/.dotfiles/config/zsh"
 
@@ -38,6 +36,8 @@ files=(
   $DOTFILES/.exports
   $DOTFILES/.aliases
   $DOTFILES/.functions
+  $DOTFILES/.macos
+  $HOME/.secret
   $HOME/.exports.local
   $HOME/.aliases.local
   $HOME/.initrc.local

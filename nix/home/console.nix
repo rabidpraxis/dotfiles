@@ -8,6 +8,12 @@
       xclip
       nodejs
       yarn
+      silver-searcher
+      gnumake
+
+      jq
+      sassc
+      libsass
 
       gcc
       llvm

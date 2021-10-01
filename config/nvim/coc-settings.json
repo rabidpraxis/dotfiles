@@ -1,4 +1,18 @@
 {
+  // Ruby
+  "solargraph.promptDownload": true,
+  "solargraph.commandPath": "~/.local/bin/solargraph",
+  "solargraph.useBundler": false,
+  "solargraph.autoformat": false,
+  "solargraph.formatting": true,
+  "solargraph.diagnostics": true,
+  "solargraph.completion": true,
+  "solargraph.symbols": true,
+  "solargraph.hover": true,
+  "solargraph.definitions": true,
+  "solargraph.references": true,
+
+  // Clojure
   "diagnostic-languageserver.linters": {
     "clj_kondo_lint": {
       "command": "clj-kondo",

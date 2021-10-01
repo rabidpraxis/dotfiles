@@ -23,7 +23,7 @@ return function()
         -- Ctags lookup for ruby modules
         { ']', 'viw<c-[>vB<c-]>' },
         -- Forget anything?
-        { '??', '<Cmd>:vsplit ~/.dotfiles/nvim/lua/keymaps.lua <CR>' },
+        { '??', '<Cmd>:vsplit ~/.dotfiles/config/nvim/lua/plugins/nest.lua <CR>' },
         { 's', '<Cmd>:vsplit<CR>' },
         -- Clojure Eval
         { 'ce', '<Cmd>:Eval<CR>' },
@@ -47,7 +47,7 @@ return function()
             { 'c', '<Cmd>Git commit<CR>' },
             { 'p', '<Cmd>Git push<CR>' },
         }},
-        { 'h', {
+        { 't', {
             { 'n', '<Cmd>:TestNearest<CR>' },
             { 't', '<Cmd>:TestFile<CR>' },
             { 'a', '<Cmd>:TestSuite<CR>' },

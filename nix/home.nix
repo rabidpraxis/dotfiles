@@ -22,6 +22,7 @@ in
     ./home/zsh.nix
     ./home/console.nix
     ./home/nvim.nix
+    ./home/clojure.nix
   ];
 
   xresources.properties = {

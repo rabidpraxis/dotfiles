@@ -31,6 +31,8 @@ packer.startup(
     use { 'tpope/vim-repeat' }
     use { 'tpope/vim-eunuch' }
     use { 'tpope/vim-surround' }
+    use { 'radenling/vim-dispatch-neovim' }
+    use { 'tpope/vim-dispatch' }
 
     -- UI to select things (files, grep results, open buffers...)
     use { 'nvim-lua/plenary.nvim' }
@@ -52,6 +54,14 @@ packer.startup(
     -- LSP
     use { 'nvim-treesitter/nvim-treesitter-textobjects' }
     use { 'neovim/nvim-lspconfig', config = conf('nvim-lspconfig') }
+
+    use { 'NoahTheDuke/coc-clojure' }
+    use {
+      'neoclide/coc.nvim',
+      branch = 'release',
+      config = conf('coc-nvim')
+    }
+
 
     -- Autocompletion plugin
     use { 'nvim-lua/completion-nvim' }
@@ -83,9 +93,6 @@ packer.startup(
     use { 'tpope/vim-sexp-mappings-for-regular-people' }
 
     use { 'luochen1990/rainbow' }
-
-    use { 'NoahTheDuke/coc-clojure' }
-    use { 'neoclide/coc.nvim', branch = 'release' }
 
     use { 'LionC/nest.nvim', config = conf('nest') }
 

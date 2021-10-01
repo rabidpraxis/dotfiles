@@ -1,0 +1,3 @@
+# vim: noai:ft=sh
+
+export NODE_EXEC_PATH="$HOME/.asdf/installs/nodejs/14.17.6/bin/node"
