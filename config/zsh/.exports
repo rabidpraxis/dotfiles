@@ -5,6 +5,8 @@
 export VISUAL="nvim"
 export EDITOR=$VISUAL
 
+export CHROMIUM_FLAGS="--force-device-scale-factor=n --high-dpi-support=1"
+
 export GPG_TTY=$(tty)
 
 # Git

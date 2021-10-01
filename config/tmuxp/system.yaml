@@ -1,0 +1,10 @@
+session_name: system
+windows:
+  - window_name: dotfiles
+    start_directory: ~/.dotfiles
+    panes:
+      - nvim
+  - window_name: home
+    start_directory: ~/
+    panes:
+      - nvim

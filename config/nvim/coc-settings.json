@@ -12,6 +12,19 @@
   "solargraph.definitions": true,
   "solargraph.references": true,
 
+  "languageserver": {
+    "clojure-lsp": {
+      "command": "bash",
+      "args": ["-c", "clojure-lsp"],
+      "filetypes": ["clojure"],
+      "rootPatterns": ["project.clj"],
+      "additionalSchemes": ["jar", "zipfile"],
+      "trace.server": "verbose",
+      "initializationOptions": {
+      }
+    }
+  },
+
   // Clojure
   "diagnostic-languageserver.linters": {
     "clj_kondo_lint": {

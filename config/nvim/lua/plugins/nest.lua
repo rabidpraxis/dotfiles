@@ -5,6 +5,8 @@ return function()
 
     { '<CR>', '<Cmd>:noh<CR><CR>' },
 
+    { '<c--><c-->', '<Cmd>Commentary<CR>' },
+
     -- Window navigate
     { '<c-h>', '<c-w>h' },
     { '<c-k>', '<c-w>k' },

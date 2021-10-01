@@ -14,12 +14,8 @@ in
     };
   };
 
-  programs.git.enable = true;
-  programs.tmux.enable = true;
-
   imports = [
     ./home/desktop.nix
-    ./home/zsh.nix
     ./home/console.nix
     ./home/nvim.nix
     ./home/clojure.nix
@@ -63,5 +59,9 @@ in
     "rofi/config.rasi".source = ../config/rofi/config.rasi;
     "sxhkd/sxhkdrc".source = ../config/sxhkd/sxhkdrc;
     "bspwm/bspwmrc".source = ../config/bspwm/bspwmrc;
+    "tmuxp" = {
+      source = ../config/tmuxp;
+      recursive = true;
+    };
   };
 }

@@ -39,4 +39,6 @@ return function()
       error = "",
     },
   }
+
+  require('nvim-tree').setup()
 end

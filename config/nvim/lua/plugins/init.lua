@@ -26,7 +26,7 @@ packer.startup(
     -- Fugitive-companion to interact with github
     use { 'tpope/vim-rhubarb' }
 
-    -- '{ gc' to comment visual regions/lines
+    -- 'gc' to comment visual regions/lines
     use { 'tpope/vim-commentary' }
     use { 'tpope/vim-repeat' }
     use { 'tpope/vim-eunuch' }

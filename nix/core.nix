@@ -21,6 +21,8 @@ in
   environment.systemPackages = with pkgs; [
     vim
     home-manager
+
+    direnv
     nix-direnv
 
     rofi
@@ -32,6 +34,10 @@ in
     playerctl
     pulsemixer
     unstable._1password-gui
+  ];
+
+  environment.pathsToLink = [
+    "/share/nix-direnv"
   ];
 
   hardware.video.hidpi.enable = true;
@@ -59,6 +65,9 @@ in
 
   nixpkgs.config = {
     allowUnfree = true;
+    overlays = [
+      (self: super: { nix-direnv = super.nix-direnv.override { enableFlakes = true; }; } )
+    ];
     packageOverrides = super: let self = super.pkgs; in {
       nerdfonts-hack = self.nerdfonts.override {
         fonts = [ "Hack" ];
