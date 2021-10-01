@@ -12,6 +12,8 @@
     initExtra = ''
       eval `${pkgs.coreutils}/bin/dircolors "${../../config/dircolors/dark}"`
 
+      bindkey '^R' history-incremental-search-backward
+
       files=(
         $HOME/.p10k.zsh
         $HOME/.exports

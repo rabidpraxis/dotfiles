@@ -11,7 +11,7 @@ in
 
   users.users.kevin = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" ];
     shell = pkgs.zsh;
   };
 
@@ -21,6 +21,7 @@ in
   environment.systemPackages = with pkgs; [
     vim
     home-manager
+    nix-direnv
 
     rofi
     sxhkd

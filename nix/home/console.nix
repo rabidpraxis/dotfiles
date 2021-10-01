@@ -27,5 +27,9 @@
     };
   };
 
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
+  programs.direnv.nix-direnv.enableFlakes = true;
+
   xdg.configFile."alacritty/alacritty.yml".source = ../../config/alacritty/alacritty.yml;
 }
