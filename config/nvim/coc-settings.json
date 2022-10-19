@@ -1,9 +1,10 @@
 {
   // Ruby
-  "solargraph.promptDownload": true,
-  "solargraph.commandPath": "~/.local/bin/solargraph",
-  "solargraph.useBundler": false,
-  "solargraph.autoformat": false,
+  "solargraph.promptDownload": false,
+  // "solargraph.commandPath": "~/.local/bin/solargraph",
+  "solargraph.commandPath": "solargraph",
+  "solargraph.useBundler": true,
+  "solargraph.autoformat": true,
   "solargraph.formatting": true,
   "solargraph.diagnostics": true,
   "solargraph.completion": true,
@@ -11,6 +12,7 @@
   "solargraph.hover": true,
   "solargraph.definitions": true,
   "solargraph.references": true,
+  "coc.preferences.formatOnSaveFiletypes": ["ruby"],
 
   "languageserver": {
     "clojure-lsp": {

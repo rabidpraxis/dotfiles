@@ -9,8 +9,6 @@ hash gls >/dev/null 2>&1 && alias ls="gls"
 
 if type "gls" > /dev/null; then
   alias ls='gls -aFh --color --group-directories-first'
-else
-  alias ls='ls -aFh --color --group-directories-first'
 fi
 
 # ls options: F = put `/` after folders, h = byte unit suffixes, color! (even with piping to awk)
@@ -72,5 +70,12 @@ alias gco-back='g checkout HEAD~'
 
 gdv() { gd -w "$@" | view - }
 gg () { gc -a -m "$*" }
+
+fbr() {
+  local branches branch
+  branches=$(git --no-pager branch --sort=-committerdate -vv) &&
+  branch=$(echo "$branches" | fzf --no-sort +m) &&
+  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+}
 
 # vim: noai:ft=sh

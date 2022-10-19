@@ -15,7 +15,8 @@ compile_path = util.join_paths(vim.fn.stdpath('data'), 'packer_compiled.lua')
 packer.init {
   compile_path = compile_path
 }
-packer.startup(
+
+require('packer').startup(
   function(use, use_rocks)
     use { 'wbthomason/packer.nvim' }
     use { 'tpope/vim-sensible' }
@@ -31,12 +32,18 @@ packer.startup(
     use { 'tpope/vim-repeat' }
     use { 'tpope/vim-eunuch' }
     use { 'tpope/vim-surround' }
+    use { 'tpope/vim-projectionist' }
+    use { 'tpope/vim-endwise' }
+    use { 'tpope/vim-ragtag' }
     use { 'radenling/vim-dispatch-neovim' }
     use { 'tpope/vim-dispatch' }
 
+    -- Web stuff
+    use { 'mattn/emmet-vim' }
+
     -- UI to select things (files, grep results, open buffers...)
     use { 'nvim-lua/plenary.nvim' }
-    use { 'nvim-lua/popup.nvim' }
+    -- use { 'nvim-lua/popup.nvim' }
 
     -- Add git related info in the signs columns and popups
     use { 'lewis6991/gitsigns.nvim', config = function()
@@ -44,34 +51,33 @@ packer.startup(
     end}
 
     -- Highlight, edit, and navigate code using a fast incremental parsing library
-    use {
-      'nvim-treesitter/nvim-treesitter',
-      config = conf('nvim-treesitter'),
-      branch = 'master',
-      run = ':TSUpdate'
-    }
+    -- use {
+    --   'nvim-treesitter/nvim-treesitter',
+    --   config = conf('nvim-treesitter'),
+    --   branch = 'master',
+    --   run = ':TSUpdate'
+    -- }
 
     -- LSP
-    use { 'nvim-treesitter/nvim-treesitter-textobjects' }
-    use { 'neovim/nvim-lspconfig', config = conf('nvim-lspconfig') }
+    -- use { 'nvim-treesitter/nvim-treesitter-textobjects' }
+    -- use { 'neovim/nvim-lspconfig', config = conf('nvim-lspconfig') }
 
-    use { 'NoahTheDuke/coc-clojure' }
-    use {
-      'neoclide/coc.nvim',
-      branch = 'release',
-      config = conf('coc-nvim')
-    }
-
+    -- use { 'NoahTheDuke/coc-clojure' }
+    -- use {
+    --   'neoclide/coc.nvim',
+    --   branch = 'release',
+    --   config = conf('coc-nvim')
+    -- }
 
     -- Autocompletion plugin
-    use { 'nvim-lua/completion-nvim' }
-    use { 'hrsh7th/nvim-cmp',
-      config = conf('nvim-cmp'),
-      requires = {
-        'hrsh7th/cmp-nvim-lsp',
-        'hrsh7th/cmp-buffer',
-      }
-    }
+    -- use { 'nvim-lua/completion-nvim' }
+    -- use { 'hrsh7th/nvim-cmp',
+    --   config = conf('nvim-cmp'),
+    --   requires = {
+    --     'hrsh7th/cmp-nvim-lsp',
+    --     'hrsh7th/cmp-buffer',
+    --   }
+    -- }
 
     use { 'L3MON4D3/LuaSnip' }
 
@@ -91,9 +97,13 @@ packer.startup(
     use { 'guns/vim-sexp' }
     use { 'guns/vim-clojure-highlight' }
     use { 'tpope/vim-sexp-mappings-for-regular-people' }
+    use { 'Olical/conjure', config = conf('conjure') }
+
+    use { 'windwp/nvim-autopairs', config = function()
+      require('nvim-autopairs').setup{}
+    end}
 
     use { 'luochen1990/rainbow' }
-
     use { 'LionC/nest.nvim', config = conf('nest') }
 
     use {
@@ -118,7 +128,7 @@ packer.startup(
     use { 'tpope/vim-abolish' }
     use { 'junegunn/fzf.vim' }
     use { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end }
-    --
+
     use { 'jgdavey/tslime.vim' }
     use { 'janko-m/vim-test', config = conf('vim-test') }
 
@@ -131,9 +141,14 @@ packer.startup(
     use { 'kana/vim-textobj-user' }
     use { 'nelstrom/vim-textobj-rubyblock' }
 
+    -- Golang
+    use { 'fatih/vim-go' }
+
     -- Colors
     use { 'sindrets/tokyonight.nvim' }
   end
 )
+
+vim.g.user_emmet_leader_key = '<C-E>'
 
 vim.cmd('luafile ' .. compile_path)

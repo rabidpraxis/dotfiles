@@ -47,6 +47,7 @@ opt.ignorecase = true         -- ignore case letters when search
 opt.smartcase = true          -- ignore lowercase for the whole pattern
 opt.wrap = false              -- stop wrapping
 opt.termguicolors = true
+opt.mouse=""
 
 -- remove whitespace on save
 cmd[[au BufWritePre * :%s/\s\+$//e]]
@@ -93,9 +94,6 @@ cmd[[
 cmd[[
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 ]]
-
--- 8 spaces for Go files
-cmd[[autocmd FileType go setlocal shiftwidth=8 tabstop=8]]
 
 -- IndentLine
 g.indentLine_enabled = 0       -- set indentLine character

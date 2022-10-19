@@ -7,6 +7,6 @@ vim.api.nvim_exec([[
 if filereadable(".exrc")
   source .exrc
 endif
-]], true)
+]], false)
 
 require('clojure')

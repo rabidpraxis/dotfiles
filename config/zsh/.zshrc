@@ -1,4 +1,9 @@
 # vim: noai:ft=sh
+echo ".zshrc"
+
+# Load Homebrew
+eval $(/opt/homebrew/bin/brew shellenv)
+
 export PATH="/usr/local/bin:$PATH"
 export DOTFILES="$HOME/.dotfiles/config/zsh"
 
@@ -47,6 +52,7 @@ for file in $files; do
   [ -r ${file} ] && source ${file}
 done
 
+
 # Load fasd: `brew install fasd`
 eval "$(fasd --init auto)"
 
@@ -56,4 +62,4 @@ command -v dircolors >/dev/null 2>&1 && eval "$(dircolors $ZDOTDIR/.dircolors)"
 # Load direnv
 eval "$(direnv hook zsh)"
 
-. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
