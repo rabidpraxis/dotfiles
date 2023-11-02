@@ -1,6 +1,8 @@
-[user]
-	name = Kevin Webster
-	email = kevin@kevinwebster.me
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [color]
   branch = auto
@@ -88,8 +90,6 @@
 # [credential]
 # 	helper = "!aws codecommit credential-helper $@"
 # 	UseHttpPath = true
-[gpg]
-	program = /usr/local/bin/gpg
 [pull]
 	ff = only
 [init]

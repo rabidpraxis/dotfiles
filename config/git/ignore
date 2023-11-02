@@ -63,3 +63,6 @@ Session.vim
 # Specific to .dotfiles
 /nvim/plugin
 .zsh_sessions
+
+/config/credentials.yml.enc
+/config/master.key

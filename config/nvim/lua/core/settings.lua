@@ -26,10 +26,8 @@ cmd("syntax on")
 cmd("syntax sync minlines=3000")
 cmd("filetype plugin indent on")
 
--- Remap space as leader key
-vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
-g.mapleader = ' '
-g.maplocalleader = ' '
+g.terraform_fmt_on_save = 1
+g.terraform_align = 1
 
 opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
 opt.swapfile = false          -- don't use swapfile
@@ -48,6 +46,7 @@ opt.smartcase = true          -- ignore lowercase for the whole pattern
 opt.wrap = false              -- stop wrapping
 opt.termguicolors = true
 opt.mouse=""
+opt.cmdheight=2
 
 -- remove whitespace on save
 cmd[[au BufWritePre * :%s/\s\+$//e]]
@@ -74,12 +73,12 @@ opt.tags = opt.tags + 'external.tags'
 -- Tabs, indent
 -----------------------------------------------------------
 opt.expandtab = true      -- use spaces instead of tabs
-opt.shiftwidth = 2        -- shift 4 spaces when tab
 opt.tabstop = 2           -- 1 tab == 4 spaces
+opt.shiftwidth = 2        -- shift 4 spaces when tab
 opt.smartindent = true    -- autoindent new lines
 
 -- don't auto commenting new lines
-cmd[[au BufEnter * set fo-=c fo-=r fo-=o]]
+-- cmd[[au BufEnter * set fo-=c fo-=r fo-=o]]
 
 -- remove line lenght marker for selected filetypes
 cmd[[

@@ -4,6 +4,10 @@ vim.g.paredit_electric_return = 1
 vim.g.paredit_smartjump = 1
 vim.g.paredit_matchlines = 1000
 
+vim.api.nvim_exec([[
+  autocmd FileType BufNewFile,BufRead *.bb set ft=clojure
+]], false)
+
 vim.g.rainbow_conf = {
   guifgs = {
     'SeaGreen3',

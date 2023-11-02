@@ -48,3 +48,5 @@ colors:
 key_bindings:
   - { key: Equals, mods: Control, action: None }
   - { key: Minus,  mods: Control, action: None }
+  - { key: A, mods: Alt, chars: "\x1ba" }
+  - { key: D, mods: Alt, chars: "\x1bd" }
